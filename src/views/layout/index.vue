@@ -1,7 +1,7 @@
 <template>
-    <div></div>
+    <div class="h-screen"></div>
 </template>
 
 <script setup></script>
 
-<style scoped></style>
+<style lang="scss" scoped></style>
