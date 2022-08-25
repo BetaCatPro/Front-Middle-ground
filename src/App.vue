@@ -1,20 +1,14 @@
-<script setup></script>
-
 <template>
-    <div>
-        <div class="bg-slate-800 rounded-xl p-8 md:flex md:p-0">
-            <img
-                src="./assets/vue.svg"
-                alt="vue"
-                class="w-24 h-24 rounded-full mx-auto md:w-48 md:h-auto md:rounded-none"
-            />
-            <div class="pt-6 text-center space-y-4 md:p-8 md:text-left">
-                <p class="text-lg font-medium text-zinc-100">
-                    vue+vite+tailwind
-                </p>
-            </div>
-        </div>
+    <!-- 一级路由出口 -->
+    <div class="h-screen fixed top-0 left-0 w-screen">
+        <!-- <router-view></router-view> -->
+        <m-transition-router-view
+            mainComponentName="home"
+            :routerType="$store.getters.routerType"
+        ></m-transition-router-view>
     </div>
 </template>
 
-<style scoped></style>
+<script setup></script>
+
+<style lang="scss" scoped></style>
