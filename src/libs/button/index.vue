@@ -2,10 +2,10 @@
     <button
         class="text-sm text-center rounded duration-150 flex justify-center items-center"
         :class="[
-      typeEnum[type],
-      sizeEnum[sizeKey].button,
-      { 'active:scale-105': isActiveAnim }
-    ]"
+            typeEnum[type],
+            sizeEnum[sizeKey].button,
+            { 'active:scale-105': isActiveAnim }
+        ]"
         @click.stop="onBtnClick"
     >
         <!-- 展示 loading -->
@@ -24,7 +24,7 @@
             :fillClass="iconClass"
         ></m-svg-icon>
         <!-- 文字按钮 -->
-        <slot v-else/>
+        <slot v-else />
     </button>
 </template>
 
@@ -85,7 +85,7 @@ const props = defineProps({
             const result = keys.includes(val)
             // 如果不在则给开发者提示
             if (!result) {
-                throw new Error(`你的 type 必须是 ${ keys.join('、') } 中的一个`)
+                throw new Error(`你的 type 必须是 ${keys.join('、')} 中的一个`)
             }
             // 返回校验结果
             return result
@@ -97,12 +97,14 @@ const props = defineProps({
         default: 'default',
         validator(val) {
             // 获取所有的可选的大小（注意剔除 icon 开头的元素，因为我们期望开发者输入 size="default"，但不期望开发者输入 size="icon-default"）
-            const keys = Object.keys(sizeEnum).filter((key) => !key.includes('icon'))
+            const keys = Object.keys(sizeEnum).filter(
+                (key) => !key.includes('icon')
+            )
             // 开发者指定大小是否在可选大小中
             const result = keys.includes(val)
             // 如果不在则给开发者提示
             if (!result) {
-                throw new Error(`你的 size 必须是 ${ keys.join('、') } 中的一个`)
+                throw new Error(`你的 size 必须是 ${keys.join('、')} 中的一个`)
             }
             // 返回校验结果
             return result
