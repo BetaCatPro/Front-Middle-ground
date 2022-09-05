@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- 内容 -->
-        <slot/>
+        <slot />
         <div ref="laodingTarget" class="h-6 py-4">
             <!-- 加载更多 -->
             <m-svg-icon
@@ -43,15 +43,12 @@ const loading = useVModel(props)
 const laodingTarget = ref(null)
 // 记录当前是否在底部（是否交叉）
 const targetIsIntersecting = ref(false)
-useIntersectionObserver(
-    laodingTarget,
-    ([{ isIntersecting }]) => {
-        // 获取当前交叉状态
-        targetIsIntersecting.value = isIntersecting
-        // 触发 load
-        emitLoad()
-    }
-)
+useIntersectionObserver(laodingTarget, ([{ isIntersecting }]) => {
+    // 获取当前交叉状态
+    targetIsIntersecting.value = isIntersecting
+    // 触发 load
+    emitLoad()
+})
 
 /**
  * 触发 load
