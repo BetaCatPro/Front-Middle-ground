@@ -15,7 +15,9 @@
                 class="w-[80%] fixed top-1/3 left-[50%] translate-x-[-50%] z-50 px-2 py-1.5 rounded-sm border dark:border-zinc-600 cursor-pointer bg-white dark:bg-zinc-800 xl:w-[35%]"
             >
                 <!-- 标题 -->
-                <div class="text-lg font-bold text-zinc-900 dark:text-zinc-200 mb-2">
+                <div
+                    class="text-lg font-bold text-zinc-900 dark:text-zinc-200 mb-2"
+                >
                     {{ title }}
                 </div>
                 <!-- 内容 -->
@@ -24,13 +26,11 @@
                 </div>
                 <!-- 按钮 -->
                 <div class="flex justify-end">
-                    <m-button type="info" class="mr-2" @click="onCancelClick">{{
-                        cancelText
-                        }}
+                    <m-button type="info" class="mr-2" @click="onCancelClick"
+                        >{{ cancelText }}
                     </m-button>
-                    <m-button type="primary" @click="onConfirmClick">{{
-                        confirmText
-                        }}
+                    <m-button type="primary" @click="onConfirmClick"
+                        >{{ confirmText }}
                     </m-button>
                 </div>
             </div>
