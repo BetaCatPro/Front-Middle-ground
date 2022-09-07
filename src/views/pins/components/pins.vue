@@ -63,9 +63,10 @@
                         :src="pexelData.avatar"
                         alt=""
                     />
-                    <span class="text-base text-zinc-900 dark:text-zinc-200 ml-1">{{
-            pexelData.author
-          }}</span>
+                    <span
+                        class="text-base text-zinc-900 dark:text-zinc-200 ml-1"
+                        >{{ pexelData.author }}</span
+                    >
                 </div>
             </div>
         </div>
