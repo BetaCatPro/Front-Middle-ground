@@ -17,6 +17,7 @@ module.exports = {
     },
     plugins: ['vue'],
     rules: {
-        'vue/multi-word-component-names': 'off'
+        'vue/multi-word-component-names': 'off',
+        'no-undef': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
     }
 }
