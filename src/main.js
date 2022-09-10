@@ -5,6 +5,7 @@ import { useREM } from './utils/flexible'
 import useTheme from './utils/theme'
 import mLibs from './libs/index'
 import mDirectives from './directives/index'
+import './premission'
 import 'virtual:svg-icons-register'
 
 useREM()
